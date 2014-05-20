@@ -35,7 +35,7 @@ public class Account implements Serializable {
     	this.dni = dni;
     }
     
-    public Double getBalance() {
+    public double getBalance() {
         return balance;
     }
     

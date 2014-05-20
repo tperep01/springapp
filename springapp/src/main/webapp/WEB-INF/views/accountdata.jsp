@@ -13,7 +13,6 @@
      DNI: <c:out value="${model.account.dni}"/> <i> <br><br>
      Balance: <c:out value="${model.account.balance}"/> </i> &#8364 <br><br>
     
-    <br>
     <a href="<c:url value="deposit.htm"/>">Deposit Money</a><br><br>
     <a href="<c:url value="withdraw.htm"/>">Withdraw Money</a>
     <br>

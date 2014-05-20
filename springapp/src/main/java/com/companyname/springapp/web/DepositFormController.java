@@ -33,7 +33,7 @@ public class DepositFormController {
             return "deposit";
         }
 		
-        int amount = deposit.getAmount();
+        double amount = deposit.getAmount();
         logger.info("Deposit " + amount);
 
         productManager.depositMoney(amount);

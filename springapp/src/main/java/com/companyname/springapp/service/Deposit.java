@@ -13,14 +13,14 @@ public class Deposit {
 
     @Min(0)
     
-    private int amount;
+    private double amount;
 
-    public void setAmount(int i) {
+    public void setAmount(double i) {
         amount = i;
         logger.info("Amount set to " + i);
     }
 
-    public int getAmount() {
+    public double getAmount() {
         return amount;
     }
 }

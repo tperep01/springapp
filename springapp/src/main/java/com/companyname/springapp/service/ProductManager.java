@@ -7,10 +7,10 @@ import com.companyname.springapp.domain.Account;
 
 public interface ProductManager extends Serializable {
 
-    public void depositMoney(int amount);
-    
-    public double withdrawMoney(int amount);
-    
-    public Account getAccount();
+	public void depositMoney(double amount);
+
+	public void withdrawMoney(double amount);
+
+	public Account getAccount();
 
 }

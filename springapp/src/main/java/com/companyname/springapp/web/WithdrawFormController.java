@@ -34,10 +34,15 @@ public class WithdrawFormController {
 			return "withdraw";
 		}
 
-		int amount = withdraw.getAmount();
+		double amount = withdraw.getAmount();
 		logger.info("Withdraw " + amount);
 
-		productManager.withdrawMoney(amount);
+		try {
+			productManager.withdrawMoney(amount);
+		} catch (NullPointerException ex){
+			return "redirect:/error.htm";
+		}
+		
 		return "redirect:/accountdata.htm";
 		
 	}
@@ -46,7 +51,6 @@ public class WithdrawFormController {
 	protected Withdraw formBackingObject(HttpServletRequest request)
 			throws ServletException {
 		Withdraw withdraw = new Withdraw();
-		// priceIncrease.setPercentage(15);
 		return withdraw;
 	}
 
