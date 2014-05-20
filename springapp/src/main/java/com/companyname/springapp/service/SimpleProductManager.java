@@ -2,37 +2,38 @@ package com.companyname.springapp.service;
 
 import java.util.List;
 
-import com.companyname.springapp.domain.Product;
+import com.companyname.springapp.domain.Account;
 
 public class SimpleProductManager implements ProductManager {
 
     private static final long serialVersionUID = 1L;
     
-    private List<Product> products;
+    private Account account;
 
-    public List<Product> getProducts() {
-    	return products;        
+    public Account getAccount() {
+    	return account;        
     }
 	
-    public void setProducts(List<Product> products) {
-    	this.products = products;       
+    public void setAccount(Account account) {
+    	this.account = account;       
     }
 
 	public void depositMoney(int amount) {
-		if (products != null) {
-            for (Product product : products) {
-                double newBalance = product.getBalance() + amount;
-                product.setBalance(newBalance);
+		if (account != null) {
+                double newBalance = account.getBalance() + amount;
+                account.setBalance(newBalance);
             }
         }
-	}
+	
 
-	public void withdrawMoney(int amount) {
-		if (products != null) {
-            for (Product product : products) {
-                double newBalance = product.getBalance() - amount;
-                product.setBalance(newBalance);
+	public double withdrawMoney(int amount) {
+		double newBalance = 0;
+		if (account != null) {
+                newBalance = account.getBalance() - amount;
+                account.setBalance(newBalance);
             }
-        }
+        
+		
+		return newBalance;
 	}
 }

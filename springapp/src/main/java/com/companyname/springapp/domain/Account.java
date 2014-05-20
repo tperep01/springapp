@@ -2,7 +2,7 @@ package com.companyname.springapp.domain;
 
 import java.io.Serializable;
 
-public class Product implements Serializable {
+public class Account implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

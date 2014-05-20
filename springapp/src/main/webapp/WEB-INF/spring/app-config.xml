@@ -12,14 +12,14 @@
        http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
        
         <bean id="productManager" class="com.companyname.springapp.service.SimpleProductManager">
-         <property name="products">
-            <list>
+         <property name="account">
+            
                 <ref bean="product1"/>
-            </list>
+            
          </property>
        </bean>
 
-       <bean id="product1" class="com.companyname.springapp.domain.Product">
+       <bean id="product1" class="com.companyname.springapp.domain.Account">
          <property name="id" value="1561685431"/>
          <property name="name" value="Pepe García García"/>
          <property name="dni" value="12345687A"/>
