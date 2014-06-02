@@ -16,7 +16,6 @@ public class Account implements Serializable {
 
 	@Id
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
 	
     private static final long serialVersionUID = 1L;
 
