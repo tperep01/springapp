@@ -11,6 +11,8 @@ public interface ProductManager extends Serializable {
 
 	public void withdrawMoney(double amount);
 
+	public List<Account> getListAccount();
+	
 	public Account getAccount();
 
 }
